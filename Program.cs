@@ -68,12 +68,12 @@ namespace DIO.Livros
 
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getvalues?view=netcore-3.1
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getname?view=netcore-3.1
-			foreach (int i in Enum.GetValues(typeof(Genero)))
+			foreach (int i in Enum.GetValues(typeof(Materia)))
 			{
-				Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
+				Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Materia), i));
 			}
-			Console.Write("Qual o genero do livro? ");
-			int entradaGenero = int.Parse(Console.ReadLine());
+			Console.Write("Qual a materia do livro? ");
+			int entradaMateria = int.Parse(Console.ReadLine());
 
 			Console.Write("Qual o titulo do livro? ");
 			string entradaTitulo = Console.ReadLine();
@@ -81,14 +81,14 @@ namespace DIO.Livros
 			Console.Write("Qual foi o ano de inicio do livro? ");
 			int entradaAno = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite a Sinopse do Livro: ");
-			string entradaDescricao = Console.ReadLine();
+			Console.Write("Digite o Assunto do Livro: ");
+			string entradaAssunto = Console.ReadLine();
 
 			Livro atualizaLivro = new Livro(id: indiceLivro,
-										genero: (Genero)entradaGenero,
+										materia: (Materia)entradaMateria,
 										titulo: entradaTitulo,
 										ano: entradaAno,
-										descricao: entradaDescricao);
+										assunto: entradaAssunto);
 
 			repositorio.Atualiza(indiceLivro, atualizaLivro);
 		}
@@ -118,12 +118,12 @@ namespace DIO.Livros
 
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getvalues?view=netcore-3.1
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getname?view=netcore-3.1
-			foreach (int i in Enum.GetValues(typeof(Genero)))
+			foreach (int i in Enum.GetValues(typeof(Materia)))
 			{
-				Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
+				Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Materia), i));
 			}
-			Console.Write("Qual o genero do livro? ");
-			int entradaGenero = int.Parse(Console.ReadLine());
+			Console.Write("Qual a materia do livro? ");
+			int entradaMateria = int.Parse(Console.ReadLine());
 
 			Console.Write("Qual o titulo do livro? ");
 			string entradaTitulo = Console.ReadLine();
@@ -131,14 +131,14 @@ namespace DIO.Livros
 			Console.Write("Qual o ano de inicio do livro? ");
 			int entradaAno = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite a Sinopse do Livro: ");
-			string entradaDescricao = Console.ReadLine();
+			Console.Write("Digite o Assunto do Livro: ");
+			string entradaAssunto= Console.ReadLine();
 
 			Livro novaLivro = new Livro(id: repositorio.ProximoId(),
-										genero: (Genero)entradaGenero,
+										materia: (Materia)entradaMateria,
 										titulo: entradaTitulo,
 										ano: entradaAno,
-										descricao: entradaDescricao);
+										assunto: entradaAssunto);
 
 			repositorio.Insere(novaLivro);
 		}

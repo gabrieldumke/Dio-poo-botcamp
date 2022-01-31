@@ -1,19 +1,19 @@
 namespace DIO.Livros
 {
-	public enum Genero
+	public enum Materia
 	{
-		Acao = 1,
-		Aventura = 2,
-		Comedia = 3,
-		Documentario = 4,
-		Drama = 5,
-		Espionagem = 6,
-		Faroeste = 7,
-		Fantasia = 8,
-		Ficcao_Cientifica = 9,
-		Musical = 10,
-		Romance = 11,
-		Suspense = 12,
-		Terror = 13
+		Fisica = 1,
+		Biologia = 2,
+		Portugues = 3,
+		Matematica = 4,
+		Literatura = 5,
+		Artes = 6,
+		Historia = 7,
+		Quimica = 8,
+		Programacao = 9,
+		Musica = 10,
+		Direito = 11,
+		Farmacia = 12,
+		Genetica = 13
 	}
 }
